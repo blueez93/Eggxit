@@ -1,0 +1,14 @@
+name: Feature request
+description: Suggest a gameplay, documentation or translation improvement.
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to improve?
+      description: Describe your idea and where it would fit in Eggxit.
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: What would this change for players?

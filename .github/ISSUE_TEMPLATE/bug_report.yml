@@ -1,0 +1,79 @@
+name: Bug report
+description: Report a reproducible Eggxit issue.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing issues first. Remove personal information, local paths, server addresses, credentials and tokens from logs and screenshots before posting. Keep spoilers out of the title.
+  - type: input
+    id: eggxit
+    attributes:
+      label: Eggxit version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: minecraft
+    attributes:
+      label: Minecraft version
+      placeholder: "1.21.1"
+    validations:
+      required: true
+  - type: input
+    id: neoforge
+    attributes:
+      label: NeoForge version
+      placeholder: "21.1.265"
+    validations:
+      required: true
+  - type: input
+    id: geckolib
+    attributes:
+      label: GeckoLib version
+      placeholder: "4.8"
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where did it happen?
+      options:
+        - Single-player
+        - Multiplayer via LAN
+        - Dedicated server
+        - Before opening a world
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start the profile.
+        2. Open the world.
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log excerpt
+      description: Remove private information before pasting.
+      render: text
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or other context
+      description: Attach a screenshot if it helps explain the issue.
